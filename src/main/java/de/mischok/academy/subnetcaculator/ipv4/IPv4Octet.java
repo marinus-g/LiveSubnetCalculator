@@ -58,7 +58,7 @@ public class IPv4Octet {
      * @param bit  The value to set the bits to.
      */
     public void setBits(int from, int bit) {
-        Arrays.fill(this.binary, from, this.binary.length - 1, bit);
+        Arrays.fill(this.binary, from, this.binary.length, bit);
         this.convertToDecimal();
     }
 
