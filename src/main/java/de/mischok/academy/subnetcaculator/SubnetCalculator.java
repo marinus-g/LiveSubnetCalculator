@@ -55,31 +55,29 @@ public class SubnetCalculator {
 
     /**
      * Handles user input for the IP address.
+     *
      * @return The user's input for the IP address.
      */
     private String handleIpInput() {
-        String input = "";
-        do {
-            if (!input.isEmpty()) {
-                System.out.print("Falsche Eingabe. Gebe eine valide Adresse ein: ");
-            }
-            input = scanner.nextLine();
-        } while (!ipValidator.isValid(input));
+        String input = this.scanner.nextLine();
+        if (!this.ipValidator.isValid(input)) {
+            System.out.print("Falsche Eingabe. Gebe eine valide IPv4-Adresse ein: ");
+            return this.handleIpInput();
+        }
         return input;
     }
 
     /**
      * Handles user input for the subnet mask.
+     *
      * @return The user's input for the subnet mask.
      */
     private String handleSubnetInput() {
-        String input = "";
-        do {
-            if (!input.isEmpty()) {
-                System.out.print("Falsche Eingabe. Gebe eine valide Subnetzmaske ein: ");
-            }
-            input = scanner.nextLine();
-        } while (!ipValidator.isValid(input) || !subnetValidator.isValid(input));
+        String input = this.scanner.nextLine();
+        if (!this.subnetValidator.isValid(input)) {
+            System.out.print("Falsche Eingabe. Gebe eine valide Subnetzmaske ein: ");
+            return this.handleSubnetInput();
+        }
         return input;
     }
 }
