@@ -74,7 +74,7 @@ public class SubnetCalculator {
      */
     private String handleSubnetInput() {
         String input = this.scanner.nextLine();
-        if (!this.subnetValidator.isValid(input)) {
+        if (!this.ipValidator.isValid(input) || !this.subnetValidator.isValid(input)) {
             System.out.print("Falsche Eingabe. Gebe eine valide Subnetzmaske ein: ");
             return this.handleSubnetInput();
         }
