@@ -34,7 +34,6 @@ public class IPv4Octet {
             number = number / 2;
             index--;
         }
-        System.out.println(Arrays.toString(this.binary));
     }
 
     /**
@@ -48,7 +47,6 @@ public class IPv4Octet {
             }
             this.decimal += (int) Math.pow(2, 7 - i);
         }
-        System.out.println(decimal);
     }
 
     /**
