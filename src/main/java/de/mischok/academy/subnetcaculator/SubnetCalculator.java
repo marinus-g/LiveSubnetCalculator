@@ -2,7 +2,7 @@ package de.mischok.academy.subnetcaculator;
 
 import de.mischok.academy.subnetcaculator.ipv4.IPv4;
 import de.mischok.academy.subnetcaculator.ipv4.Subnet;
-import de.mischok.academy.subnetcaculator.validator.Ipv4Validator;
+import de.mischok.academy.subnetcaculator.validator.IPv4Validator;
 import de.mischok.academy.subnetcaculator.validator.StringValidator;
 import de.mischok.academy.subnetcaculator.validator.SubnetValidator;
 
@@ -17,7 +17,7 @@ public class SubnetCalculator {
     // Scanner object for reading user input
     private final Scanner scanner = new Scanner(System.in);
     // Validator for validating IP addresses
-    private final StringValidator ipValidator = new Ipv4Validator();
+    private final StringValidator ipValidator = new IPv4Validator();
     // Validator for validating subnet masks
     private final StringValidator subnetValidator = new SubnetValidator();
     // Subnet object for storing the calculated subnet

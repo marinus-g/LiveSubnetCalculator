@@ -6,7 +6,7 @@ import java.util.Arrays;
  * This class validates an IPv4 address.
  * It implements the StringValidator interface.
  */
-public class Ipv4Validator implements StringValidator{
+public class IPv4Validator implements StringValidator{
 
     /**
      * Validates an IPv4 address.
